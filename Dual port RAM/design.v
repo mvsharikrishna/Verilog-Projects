@@ -32,7 +32,7 @@ module dp_ram_rtl#(parameter int addr_width = 8,  // parameters
           if(wr_en)		// if write enable is asserted, data_in is written into wr_addr location
             dp_ram[wr_addr] <= data_in;
           else
-            dp_ram[wr_addr] <= dp_ram[i];
+            dp_ram[wr_addr] <= dp_ram[wr_addr];
         end
     end
 endmodule
